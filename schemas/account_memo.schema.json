@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Account Memo",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "account_id",
+    "company_name",
+    "business_hours",
+    "office_address",
+    "services_supported",
+    "emergency_definition",
+    "emergency_routing_rules",
+    "non_emergency_routing_rules",
+    "call_transfer_rules",
+    "integration_constraints",
+    "after_hours_flow_summary",
+    "office_hours_flow_summary",
+    "questions_or_unknowns",
+    "notes"
+  ],
+  "properties": {
+    "account_id": {
+      "type": "string",
+      "description": "Stable identifier for the account, derived from transcripts or filenames."
+    },
+    "company_name": {
+      "type": "string",
+      "description": "Official company or practice name."
+    },
+    "business_hours": {
+      "type": ["string", "null"],
+      "description": "Human-readable business hours description as stated in transcripts."
+    },
+    "office_address": {
+      "type": ["string", "null"],
+      "description": "Primary office address as stated in transcripts."
+    },
+    "services_supported": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of services the agent can handle, taken directly from transcripts when mentioned."
+    },
+    "emergency_definition": {
+      "type": ["string", "null"],
+      "description": "How the business defines an emergency, quoted or summarized from transcripts."
+    },
+    "emergency_routing_rules": {
+      "type": ["string", "null"],
+      "description": "Operational rules for routing emergency calls."
+    },
+    "non_emergency_routing_rules": {
+      "type": ["string", "null"],
+      "description": "Operational rules for routing non-emergency calls."
+    },
+    "call_transfer_rules": {
+      "type": ["string", "null"],
+      "description": "Rules for transferring calls, including targets and fallback behaviors."
+    },
+    "integration_constraints": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Constraints related to EHR/CRM/other integrations, if explicitly mentioned."
+    },
+    "after_hours_flow_summary": {
+      "type": ["string", "null"],
+      "description": "Narrative summary of how after-hours calls should be handled."
+    },
+    "office_hours_flow_summary": {
+      "type": ["string", "null"],
+      "description": "Narrative summary of how office-hours calls should be handled."
+    },
+    "questions_or_unknowns": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Questions and missing pieces of configuration that could not be reliably extracted."
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Additional implementation notes or clarifications from transcripts."
+    }
+  }
+}
+

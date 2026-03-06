@@ -1,0 +1,6 @@
+Agent: Welcome to ACME Dental Care, this is the demo line.
+Client: Do you support after-hours triage?
+Agent: Yes, after hours we identify whether the call is an emergency.
+Agent: If it is, we page the on-call provider and transfer the caller.
+Agent: If it is not an emergency, we collect details and confirm they will get a call back during business hours.
+

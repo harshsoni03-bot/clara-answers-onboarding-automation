@@ -1,0 +1,25 @@
+{
+  "account_id": "acme",
+  "company_name": "ACME Dental Care",
+  "business_hours": "from 9am to 5pm Monday through Friday",
+  "office_address": null,
+  "services_supported": [
+    "appointment scheduling, rescheduling, cancellations, and basic billing questions"
+  ],
+  "emergency_definition": null,
+  "emergency_routing_rules": "For emergencies, we transfer calls directly to our on-call doctor.",
+  "non_emergency_routing_rules": null,
+  "call_transfer_rules": null,
+  "integration_constraints": [],
+  "after_hours_flow_summary": "After hours, we still answer calls but usually take messages and escalate emergencies.",
+  "office_hours_flow_summary": "during business hours.",
+  "questions_or_unknowns": [
+    "office_address: Office address not clearly stated in demo calls.",
+    "emergency_definition: Emergency definition not clearly stated in demo calls.",
+    "non_emergency_routing_rules: Non-emergency routing not clearly described in demo calls.",
+    "call_transfer_rules: Call transfer rules not clearly described in demo calls."
+  ],
+  "notes": [
+    "No explicit integration constraints were mentioned in demo calls; verify integrations during onboarding."
+  ]
+}
