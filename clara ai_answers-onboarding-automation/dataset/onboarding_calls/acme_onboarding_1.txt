@@ -1,0 +1,10 @@
+Onboarding Specialist: Let's confirm your configuration for ACME Dental Care.
+Client: Our business hours are 8am to 6pm Monday through Thursday, and 9am to 1pm on Friday.
+Client: The office address is 123 Main Street, Suite 400, Springfield.
+Client: For emergencies, we define them as uncontrolled bleeding, severe pain, or trauma to the teeth or jaw.
+Client: For emergencies after hours, the agent should collect the caller's name, phone number, and address, then transfer to the on-call doctor at our emergency line.
+Client: For non-emergencies after hours, the agent should collect details and confirm we will call them back the next business day.
+Client: During business hours, emergencies should be transferred immediately to the clinical lead at the front desk.
+Client: Non-emergencies during business hours should be transferred to the scheduling team.
+Client: We use the Dentisoft practice management system, but for now the agent should not say anything about integrations.
+

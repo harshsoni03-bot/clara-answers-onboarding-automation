@@ -1,0 +1,64 @@
+{
+  "name": "Clara Answers Onboarding Automation (Demo + Onboarding)",
+  "nodes": [
+    {
+      "id": "1",
+      "name": "On Startup",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "id": "2",
+      "name": "Run Demo Pipeline (v1)",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [550, 200],
+      "parameters": {
+        "command": "python",
+        "arguments": "scripts/extract_demo_data.py",
+        "workingDirectory": "./"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Run Onboarding Pipeline (v2)",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [850, 200],
+      "parameters": {
+        "command": "python",
+        "arguments": "scripts/update_from_onboarding.py",
+        "workingDirectory": "./"
+      }
+    }
+  ],
+  "connections": {
+    "On Startup": {
+      "main": [
+        [
+          {
+            "node": "Run Demo Pipeline (v1)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run Demo Pipeline (v1)": {
+      "main": [
+        [
+          {
+            "node": "Run Onboarding Pipeline (v2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "timezone": "UTC"
+  }
+}
+

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Retell Agent Spec (Abstract v1)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "agent_name",
+    "voice_style",
+    "version",
+    "timezone",
+    "business_hours",
+    "system_prompt",
+    "call_transfer_protocol",
+    "fallback_protocol"
+  ],
+  "properties": {
+    "agent_name": {
+      "type": "string",
+      "description": "Human-readable name for the agent (e.g., 'ACME Clinic Answering Agent')."
+    },
+    "voice_style": {
+      "type": "string",
+      "description": "Desired voice style label (e.g., 'friendly-professional', 'calm-clinical')."
+    },
+    "version": {
+      "type": "string",
+      "description": "Configuration version identifier, e.g. 'v1' or 'v2'."
+    },
+    "timezone": {
+      "type": "string",
+      "description": "IANA timezone or similar (must come from transcripts or be listed as unknown)."
+    },
+    "business_hours": {
+      "type": ["string", "null"],
+      "description": "Copy of the business hours from the account memo for easy consumption by downstream systems."
+    },
+    "system_prompt": {
+      "type": "string",
+      "description": "Full system prompt used to steer the voice agent. Must embed business and safety flows without referencing internal tools."
+    },
+    "call_transfer_protocol": {
+      "type": "string",
+      "description": "Textual description of how and when the agent should initiate transfers."
+    },
+    "fallback_protocol": {
+      "type": "string",
+      "description": "Instructions for what to do when transfers fail or when information is missing."
+    }
+  }
+}
+

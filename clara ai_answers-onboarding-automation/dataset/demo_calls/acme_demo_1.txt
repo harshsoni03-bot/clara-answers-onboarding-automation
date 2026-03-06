@@ -1,0 +1,8 @@
+Agent: Hi, this is ACME Dental Care, how can I help you today?
+Client: I'm evaluating your Clara Answers setup for our practice.
+Agent: Great. Our office hours are from 9am to 5pm Monday through Friday.
+Agent: We handle appointment scheduling, rescheduling, cancellations, and basic billing questions.
+Agent: For emergencies, we transfer calls directly to our on-call doctor.
+Agent: For non-emergencies, we keep the caller on the line and transfer to the front desk.
+Agent: After hours, we still answer calls but usually take messages and escalate emergencies.
+
